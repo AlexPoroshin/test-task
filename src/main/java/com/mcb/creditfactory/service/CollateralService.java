@@ -2,6 +2,7 @@ package com.mcb.creditfactory.service;
 
 import com.mcb.creditfactory.dto.CarDto;
 import com.mcb.creditfactory.dto.Collateral;
+import com.mcb.creditfactory.service.airplane.AirplaneService;
 import com.mcb.creditfactory.service.car.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,9 @@ import java.util.Optional;
 public class CollateralService {
     @Autowired
     private CarService carService;
+
+    @Autowired
+    private AirplaneService airplaneService;
 
     @SuppressWarnings("ConstantConditions")
     public Long saveCollateral(Collateral object) {
